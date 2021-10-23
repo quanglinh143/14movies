@@ -1,0 +1,89 @@
+.movies-container-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    
+}
+.movies-container{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 140px;
+   
+   
+}
+.movies-items{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #1b223a;
+    background-color: #272f49;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    
+}
+.movies-items:hover{
+    box-shadow: 0 0 5px 2px #fff;
+    
+}
+
+.movies-img img{
+    width: 100%;
+    height: 342px;
+    margin-bottom: 10px;
+}
+.movies-box-title{
+    display: flex;
+    justify-content: space-between;
+}
+.movies-name{
+    font-size: 18px;
+    font-family: Century ;
+    font-weight: 550;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+/* pagination */
+.movies-pagination{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    
+}
+.PaginationBttns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom:150px ;
+}
+.PaginationBttns li{
+    list-style: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+
+}
+.PaginationBttns li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 20px 30px;
+
+}
+.paginationActive{
+    background-color: red;
+    
+}

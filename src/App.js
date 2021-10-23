@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Homepage from './homepage/Homepage';
+import { useState,useEffect } from 'react';
+import { useSelector,useDispatch } from 'react-redux';
+import { setData } from './redux/actions/Movieactions';
+import axios from 'axios';
 function App() {
+  const dispatch=useDispatch();
+  const fetchData=async()=>{
+    const response=await axios.get(`https://quanphim.herokuapp.com/api/phimle`)
+    .catch((err)=>console.log("ERR_API:",err))
+    const action=setData(response.data);
+    dispatch(action)
+  }
+  useEffect(()=>{
+      fetchData()
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Homepage/>  
+     
     </div>
   );
 }

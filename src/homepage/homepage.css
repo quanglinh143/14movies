@@ -1,0 +1,33 @@
+.homepage-container{
+    padding: 0;
+    
+    min-height: 100vh;
+    background-color: #39445a;
+    color: #fff;
+    width: 100%;
+
+}
+.homepage-all{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+}
+
+.scroll{
+    width: 36px;
+    height: 36px;
+    background-color:#465ea5;;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 88%;
+    right: 40px;
+    cursor: pointer;
+    
+}
